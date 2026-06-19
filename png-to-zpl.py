@@ -11,7 +11,7 @@ with open(image_path, 'rb') as f:
     image_bytes = f.read()
 
 token = '00000000-0000-0000-0000-000000000000' # TODO: Replace with your API key
-url = 'https://www.labelzoom.net/api/v2/convert/png/to/zpl'
+url = 'https://api.labelzoom.com/api/v2/convert/png/to/zpl'
 headers = { 'Content-Type': 'image/png', 'Accept': 'text/plain', 'Authorization': f'Bearer {token}' }
 response = requests.post(url, data=image_bytes, headers=headers)
 
